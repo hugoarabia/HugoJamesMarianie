@@ -61,7 +61,8 @@ root.attributes('-fullscreen', True)  # Enable fullscreen mode
 canvas = tk.Canvas(root, highlightthickness=0)
 canvas.pack(fill="both", expand=True)
 
-background_image = PhotoImage(file="wallpaperpokemon.png")  # Replace with your background image file
+image = Image.open("wallpaperpokemon.jpg")  # Open the image using PIL
+background_image = ImageTk.PhotoImage(image)  # Replace with your background image file
 canvas.create_image(0, 0, anchor="nw", image=background_image)
 
 # Centered widgets
